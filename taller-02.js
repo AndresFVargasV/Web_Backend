@@ -17,7 +17,6 @@ function findMax(listaNumeros){
     numeroMayor = listaNumeros[0]
 
     for (let index = 1; index < listaNumeros.length; index++) {
-
         if (numeroMayor < listaNumeros[index]){
             numeroMayor = listaNumeros[index]
         }    
@@ -28,9 +27,12 @@ function findMax(listaNumeros){
 // Punto 3
 
 function includes(listaNumeros, objetivo){
-
-    array.forEach(element => {
-        element === objetivo ? return true: false
-    });
-
+    for (let index = 0; index < listaNumeros.length; index++) {
+        if (listaNumeros[index]===objetivo){
+            return true
+        }   
+    }
+    return false
 }
+
+console.log(includes([1,2,4,5],6))
