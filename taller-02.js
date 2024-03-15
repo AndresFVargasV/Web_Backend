@@ -35,4 +35,24 @@ function includes(listaNumeros, objetivo){
     return false
 }
 
-console.log(includes([1,2,4,5],6))
+// Punto 4
+
+function sum(listaNumeros){
+    return listaNumeros.reduce((acumulador, valor) => acumulador + valor, 0)
+}
+
+// Punto 5
+
+function missingNumbers(listaNumeros){
+    numMayor = Math.max(...listaNumeros)
+    numMenor = Math.min(...listaNumeros)
+
+    resultado = []
+
+    for (let index = numMenor; index < numMayor; index++) {
+        if (!listaNumeros.includes(index)){
+            resultado.push(index)
+        }
+    }
+    return resultado
+}
